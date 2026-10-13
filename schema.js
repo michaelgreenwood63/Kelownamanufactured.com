@@ -64,6 +64,8 @@
     '/selling-a-manufactured-home': 'Selling a Manufactured Home',
     '/buying-a-manufactured-home': 'Buying a Manufactured Home',
     '/pad-rent-rules-bc': 'Pad Rent Rules in BC',
+    '/financing-a-manufactured-home': 'Financing a Manufactured Home',
+    '/manufactured-vs-modular-vs-stick-built': 'Manufactured vs. Modular vs. Stick-Built',
     '/team': 'Our Team',
     '/contact': 'Contact'
   };
