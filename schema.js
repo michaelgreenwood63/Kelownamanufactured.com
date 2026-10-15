@@ -61,6 +61,9 @@
   var PAGES = {
     '/parks': 'Park Directory',
     '/wfn-land-vs-bc-land': 'WFN Land vs. BC Land',
+    '/freehold-vs-leasehold': 'Freehold vs. Leasehold',
+    '/pad-lease-agreements-explained': 'Pad Lease Agreements Explained',
+    '/park-redevelopment-and-closure-risk': 'Park Redevelopment & Closure Risk',
     '/selling-a-manufactured-home': 'Selling a Manufactured Home',
     '/buying-a-manufactured-home': 'Buying a Manufactured Home',
     '/pad-rent-rules-bc': 'Pad Rent Rules in BC',
