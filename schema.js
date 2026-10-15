@@ -18,8 +18,8 @@
         'name': 'Mark Jontz & Associates',
         'alternateName': 'Kelowna Manufactured',
         'url': BASE,
-        'telephone': '+12507176330',
-        'email': 'info@markjontz.com',
+        'telephone': '+12508616002',
+        'email': 'Michael@markjontz.com',
         'description': 'Mark Jontz & Associates at Royal LePage Kelowna — manufactured and mobile home real estate specialists across Kelowna, West Kelowna, Lake Country, and Peachland, including parks on Westbank First Nation land.',
         'address': {
           '@type': 'PostalAddress',

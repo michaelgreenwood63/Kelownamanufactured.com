@@ -285,3 +285,12 @@ a.complex-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-card-hov
 .jur-wfn{background:#EDE6D8;color:var(--amber)}
 .jur-bc{background:var(--sage);color:var(--sage-dark)}
 .jur-freehold{background:#E7EDE8;color:#5C7566}
+
+/* ── SOLD GALLERY ── */
+.sold-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin:28px 0 8px}
+.sold-card{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-card);background:#fff}
+.sold-photo{height:170px;background-size:cover;background-position:center;position:relative}
+.sold-badge{position:absolute;top:12px;left:12px;background:var(--sage-dark);color:#fff;font-size:10.5px;font-weight:800;padding:5px 11px;border-radius:6px;text-transform:uppercase;letter-spacing:.5px}
+.sold-body{padding:16px 18px}
+.sold-unit{font-size:14.5px;font-weight:800;color:var(--charcoal);margin-bottom:4px}
+.sold-specs{font-size:13.5px;color:var(--muted)}
