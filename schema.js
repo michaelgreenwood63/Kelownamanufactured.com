@@ -59,6 +59,7 @@
   });
 
   var PAGES = {
+    '/listings': 'Listings',
     '/parks': 'Park Directory',
     '/wfn-land-vs-bc-land': 'WFN Land vs. BC Land',
     '/freehold-vs-leasehold': 'Freehold vs. Leasehold',
