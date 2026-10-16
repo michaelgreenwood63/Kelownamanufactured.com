@@ -218,5 +218,21 @@ window.formspree = window.formspree || function(){ (formspree.q = formspree.q ||
 formspree('initForm', { formElement: '#page-lead-form', formId: 'moejyebv' });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<script>
+document.querySelectorAll('.nav-dropdown > a').forEach(function(trigger){
+  trigger.addEventListener('click', function(e){
+    e.preventDefault();
+    var parent = trigger.parentElement;
+    var wasOpen = parent.classList.contains('open');
+    document.querySelectorAll('.nav-dropdown.open').forEach(function(d){ d.classList.remove('open'); });
+    if (!wasOpen) parent.classList.add('open');
+  });
+});
+document.addEventListener('click', function(e){
+  document.querySelectorAll('.nav-dropdown.open').forEach(function(d){
+    if (!d.contains(e.target)) d.classList.remove('open');
+  });
+});
+</script>
 </body>
 </html>
