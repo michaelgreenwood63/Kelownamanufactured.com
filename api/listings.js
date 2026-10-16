@@ -90,7 +90,7 @@ async function fetchOfficeNames(token, officeKeys) {
 }
 
 module.exports = async (req, res) => {
-  res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate=600');
+  res.setHeader('Cache-Control', 's-maxage=1800, stale-while-revalidate=3600');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -105,16 +105,33 @@ module.exports = async (req, res) => {
   }
 
   const cityFilter = '(' + CITIES.map(c => `City eq '${c.replace(/'/g, "''")}'`).join(' or ') + ')';
-  const $filter = `${cityFilter} and StateOrProvince eq 'British Columbia'`;
+  const baseFilter = `${cityFilter} and StateOrProvince eq 'British Columbia'`;
+
+  // Narrow server-side using the OData collection-lambda syntax (StructureType is a
+  // RESO collection field — `eq` alone does NOT work on it, you must use any()).
+  // Verified directly against the live DDF API to return the exact same result set
+  // as the old "fetch everything, filter client-side" approach, but ~25x fewer
+  // records to paginate through (131 vs 3,251 for this city set) — this is what
+  // was making /listings take 10-15s to load. Client-side whitelist below is kept
+  // as a safety net in case this ever returns something unexpected.
+  const narrowFilter = `${baseFilter} and StructureType/any(s: s eq 'Manufactured Home')`;
 
   try {
     let token = await getBearerToken(clientId, clientSecret);
-    let result = await queryAllRESO(token, $filter);
+    let result = await queryAllRESO(token, narrowFilter);
 
     if (!result.ok && result.status === 401) {
       _cachedToken = null;
       token  = await getBearerToken(clientId, clientSecret);
-      result = await queryAllRESO(token, $filter);
+      result = await queryAllRESO(token, narrowFilter);
+    }
+
+    // If the narrow server-side filter ever misbehaves for any other reason,
+    // fall back to the proven broad-fetch + client-side-filter approach rather
+    // than breaking the page — slower, but never down.
+    if (!result.ok) {
+      console.error(`DDF narrow filter ${result.status}, falling back to broad fetch:`, result.body.slice(0, 300));
+      result = await queryAllRESO(token, baseFilter);
     }
 
     if (!result.ok) {
