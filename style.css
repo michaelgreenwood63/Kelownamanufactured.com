@@ -291,3 +291,10 @@ a.complex-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-card-hov
 .photo-tile{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow-card);position:relative;height:200px}
 .photo-tile img{width:100%;height:100%;object-fit:cover;display:block}
 .photo-tile-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(16,37,49,.82) 0%,rgba(16,37,49,0) 100%);color:#fff;font-size:12.5px;font-weight:700;padding:28px 14px 10px}
+
+/* ── PLAIN PHOTO DIVIDERS (no captions — visual breaks between sections) ── */
+.photo-divider{max-width:1180px;margin:0 auto;padding:0 28px}
+.photo-divider img{width:100%;height:280px;object-fit:cover;border-radius:var(--r);box-shadow:var(--shadow-card);display:block}
+.photo-duo{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.photo-duo img{width:100%;height:220px;object-fit:cover;border-radius:var(--r);box-shadow:var(--shadow-card);display:block}
+@media (max-width:640px){.photo-duo{grid-template-columns:1fr}.photo-divider img{height:200px}}
