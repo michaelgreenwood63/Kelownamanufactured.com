@@ -15,14 +15,14 @@ function renderCard(l){
   var sqft=l.LivingArea?Math.round(l.LivingArea).toLocaleString('en-CA')+' sqft':null;
   var details=[beds,baths,sqft].filter(Boolean).map(function(d){return'<span class="listing-detail">'+d+'</span>';}).join('');
   var office=l.ListOfficeName?'<div class="listing-office">'+l.ListOfficeName+'</div>':'';
-  var url=l.ListingURL||('https://www.realtor.ca');
-  return'<a href="'+url+'" target="_blank" rel="noopener" class="listing-card">'+
+  var url='/listing?id='+encodeURIComponent(l.ListingKey||'');
+  return'<a href="'+url+'" class="listing-card">'+
     '<div class="listing-photo" style="'+photoStyle+'"><span class="listing-badge">Active</span></div>'+
     '<div class="listing-body">'+
     '<div class="listing-price">'+formatPrice(l.ListPrice)+'</div>'+
     '<div class="listing-address">'+buildAddress(l)+', '+(l.City||'')+' BC</div>'+
     '<div class="listing-details">'+details+'</div>'+
-    office+'<span class="listing-cta">View on REALTOR.ca →</span>'+
+    office+'<span class="listing-cta">View Full Details →</span>'+
     '</div></a>';
 }
 
