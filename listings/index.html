@@ -74,18 +74,19 @@
 <section class="section">
   <div class="listings-header">
     <div class="filter-row">
-      <select id="f-price" class="filter-select">
-        <option value="">Any Price</option>
-        <option value="0-200000">Under $200k</option>
-        <option value="200000-350000">$200k–$350k</option>
-        <option value="350000-500000">$350k–$500k</option>
-        <option value="500000-99999999">$500k+</option>
-      </select>
+      <input type="number" id="f-price-min" class="filter-input" placeholder="Min Price" min="0" step="5000" style="width:130px">
+      <input type="number" id="f-price-max" class="filter-input" placeholder="Max Price" min="0" step="5000" style="width:130px">
       <select id="f-beds" class="filter-select">
         <option value="0">Any Beds</option>
         <option value="1">1+ Beds</option>
         <option value="2">2+ Beds</option>
         <option value="3">3+ Beds</option>
+      </select>
+      <select id="f-baths" class="filter-select">
+        <option value="0">Any Baths</option>
+        <option value="1">1+ Baths</option>
+        <option value="2">2+ Baths</option>
+        <option value="3">3+ Baths</option>
       </select>
       <select id="f-city" class="filter-select">
         <option value="">Any City</option>

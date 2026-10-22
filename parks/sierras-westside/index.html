@@ -98,6 +98,36 @@
   </div>
 </section>
 
+<section class="section" style="max-width:820px">
+  <div class="section-eyebrow" style="text-align:center">Live Listings</div>
+  <h2 class="section-title" style="text-align:center;margin-bottom:8px">Active Listings at Sierra's Westside</h2>
+  <p style="text-align:center;color:var(--muted);margin-bottom:32px">Live from the MLS — updated directly, filtered to just this park.</p>
+  <div class="listings-header">
+    <div class="filter-row">
+      <input type="number" id="f-price-min" class="filter-input" placeholder="Min Price" min="0" step="5000" style="width:130px">
+      <input type="number" id="f-price-max" class="filter-input" placeholder="Max Price" min="0" step="5000" style="width:130px">
+      <select id="f-beds" class="filter-select">
+        <option value="0">Any Beds</option>
+        <option value="1">1+ Beds</option>
+        <option value="2">2+ Beds</option>
+        <option value="3">3+ Beds</option>
+      </select>
+      <select id="f-baths" class="filter-select">
+        <option value="0">Any Baths</option>
+        <option value="1">1+ Baths</option>
+        <option value="2">2+ Baths</option>
+        <option value="3">3+ Baths</option>
+      </select>
+      <button class="filter-btn" onclick="applyFilters()">Apply Filters</button>
+      <button class="filter-reset" onclick="resetFilters()">Reset</button>
+    </div>
+    <p id="listings-count" style="font-size:14px;color:var(--muted);font-weight:600"></p>
+  </div>
+  <div class="listings-grid" id="listings-grid">
+    <div class="listings-status"><div style="font-size:32px">⏳</div><p>Loading active listings…</p></div>
+  </div>
+</section>
+
 <section class="section-alt" id="faq">
   <div class="section" style="max-width:820px">
     <div class="section-eyebrow" style="text-align:center">Common Questions</div>
@@ -229,5 +259,7 @@ document.addEventListener('click', function(e){
   });
 });
 </script>
+<script>window.PARK_FILTER = {"name": "Sierra's Westside", "addresses": [{"num": "2440", "words": ["old", "okanagan"]}]};</script>
+<script src="/listings.js"></script>
 </body>
 </html>
