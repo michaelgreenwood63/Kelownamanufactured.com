@@ -67,6 +67,13 @@ nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px 
 .hero h1 span{color:var(--red);font-style:italic}
 .hero-sub{font-size:19.5px;color:var(--muted);max-width:640px;margin:0 auto 42px;line-height:1.75}
 .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.trust-banner{display:block;background:var(--amber-light);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 28px;text-decoration:none;transition:background .2s}
+.trust-banner:hover{background:#E8DEC6}
+.trust-banner-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
+.trust-banner-icon{font-size:26px;flex-shrink:0}
+.trust-banner-text{font-size:15.5px;font-weight:700;color:var(--charcoal);line-height:1.5}
+.trust-banner-text span{color:var(--red)}
+.trust-banner-link{font-size:15px;font-weight:800;color:var(--red);white-space:nowrap;text-decoration:underline}
 .btn-primary{background:var(--red);color:#fff;padding:17px 32px;border-radius:var(--r-sm);font-weight:800;font-size:16px;transition:all .2s;display:inline-block;box-shadow:0 6px 18px rgba(27,58,75,.25)}
 .btn-primary:hover{background:var(--red-dark);box-shadow:0 8px 22px rgba(27,58,75,.32);transform:translateY(-1px)}
 .btn-secondary{background:#fff;color:var(--charcoal);border:2px solid var(--border);padding:15px 30px;border-radius:var(--r-sm);font-weight:700;font-size:16px;transition:all .2s;display:inline-block}
