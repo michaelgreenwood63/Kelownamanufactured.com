@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kelowna Manufactured | Manufactured & Mobile Home Specialists</title>
-<meta name="description" content="Buying or selling a manufactured home in Kelowna, West Kelowna, Lake Country, or Peachland? We map every park — including Westbank First Nation leasehold communities — and know exactly which rules apply.">
-<meta name="keywords" content="manufactured home Kelowna, mobile home West Kelowna, Westbank First Nation manufactured home park, pad rent BC, manufactured home park Okanagan">
+<title>Kelowna Manufactured | Mobile Home Specialists</title>
+<meta name="description" content="Buying or selling a manufactured home in Kelowna, West Kelowna, Lake Country, or Peachland? We map every park, including WFN leasehold communities.">
+<meta name="keywords" content="manufactured home Kelowna, mobile home West Kelowna, trailer park Kelowna, Westbank First Nation manufactured home park, pad rent BC, manufactured home park Okanagan">
 <link rel="canonical" href="https://kelownamanufactured.com/">
-<meta property="og:title" content="Kelowna Manufactured | Manufactured & Mobile Home Specialists">
+<meta property="og:title" content="Kelowna Manufactured | Mobile Home Specialists">
 <meta property="og:description" content="Park-by-park knowledge of manufactured and mobile home communities across the Central Okanagan, including Westbank First Nation land.">
 <meta property="og:url" content="https://kelownamanufactured.com/">
 <meta property="og:type" content="website">
@@ -15,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="/style.css">
 <script src="/schema.js" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -112,6 +113,21 @@
     </a>
   </div>
   <p style="text-align:center;margin-top:28px;font-size:15px"><a href="/wfn-land-vs-bc-land" style="color:var(--red);font-weight:700">Not sure which applies to your park? See the full breakdown →</a></p>
+</section>
+
+<!-- PARKS MAP -->
+<section class="section-alt" id="map">
+  <div class="section" style="max-width:980px">
+    <div class="section-eyebrow" style="text-align:center">See Where Every Park Is</div>
+    <h2 class="section-title" style="text-align:center">43 Parks, Mapped Across the Okanagan</h2>
+    <p class="section-sub" style="text-align:center;margin:0 auto 32px;max-width:680px">Whether you call it a manufactured home, mobile home, or trailer — click a pin to see the address and jump straight to that park's page.</p>
+    <div id="home-parks-map" style="height:420px;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-card)"></div>
+    <div id="home-parks-map-legend" style="margin-top:14px;text-align:center"></div>
+    <p style="text-align:center;margin-top:28px;font-size:15px">Don't see your park's details yet? <a href="/parks" style="color:var(--red);font-weight:700">Browse the full directory →</a> or <a href="#help" style="color:var(--red);font-weight:700">just ask Mark →</a></p>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="/parks-map.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', function(){ initParksMap('home-parks-map'); });</script>
 </section>
 
 <div class="photo-divider"><img src="/images/sold/ranch-park-215.jpg" alt="Manufactured home in a Kelowna-area park"></div>
