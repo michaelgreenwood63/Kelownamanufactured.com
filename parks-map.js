@@ -32,7 +32,7 @@ var PARKS_MAP_DATA = [
   {slug:"pinewoods-villa", name:"Pinewoods Villa", address:"1750 Lenz Road, West Kelowna, BC", jur:"Freehold", lat:49.8729748, lng:-119.5842113},
   {slug:"princess-mobile-home-park", name:"Princess Mobile Home Park", address:"2065 Boucherie Road, West Kelowna, BC", jur:"WFN", lat:49.8254964, lng:-119.6064763},
   {slug:"ranch-park", name:"Ranch Park", address:"3591 Old Vernon Road, Kelowna, BC", jur:"BC", lat:49.9368092, lng:-119.3639359},
-  {slug:"sage-creek", name:"Sage Creek", address:"2084 Elk Road, West Kelowna, BC", jur:"WFN", lat:49.8375862, lng:-119.5985602},
+  {slug:"sage-creek", name:"Sage Creek", address:"2084 Elk Road, West Kelowna, BC", jur:"WFN", lat:49.8404108, lng:-119.6047272},
   {slug:"scenic-valley", name:"Scenic Valley Mobile Home Park", address:"580 Highway 97 South, West Kelowna, BC", jur:"WFN", lat:49.8789046, lng:-119.5383566},
   {slug:"shady-rest", name:"Shady Rest Park", address:"2095 Boucherie Road, West Kelowna, BC", jur:"WFN", lat:49.8254026, lng:-119.607187},
   {slug:"shannon-lake", name:"Shannon Lake", address:"3206 Shannon Lake Road, West Kelowna, BC", jur:"WFN", lat:49.847398, lng:-119.6216953},
